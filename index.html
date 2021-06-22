@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Colorify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="home-sec">
+      <div class="comp-name">
+        <span id="comp_logo" onclick="confetti()">Colorify</span>
+      </div>
+      <div class="home-container">
+        <div class="home-container-title">
+          <span class="home-container-title-header">Fast color generator!</span>
+          <br />
+          <span class="home-container-title-disc"
+            >Create your project with these amazing color palettes!!</span
+          >
+
+          <a href="" class="home-container-title-link">Start generating</a>
+          <a href="" class="home-container-title-link">Explore palettes</a>
+        </div>
+
+        <div class="color-palette-generator-demo">
+          <div
+            id="gen1"
+            style="background-color: #9b5de5"
+            class="color-palette-generator-demo-item"
+          ></div>
+          <div
+            id="gen2"
+            style="background-color: #fee440"
+            class="color-palette-generator-demo-item"
+          ></div>
+          <button
+            id="genNew"
+            onclick="randColor()"
+            class="color-palette-generator-demo-btn"
+          >
+            <i class="bx bx-refresh" style="font-size: 150px"></i>
+            Demo
+            <br />
+            (Click me)
+          </button>
+          <div
+            id="gen3"
+            style="background-color: #00bbf9"
+            class="color-palette-generator-demo-item"
+          ></div>
+          <div
+            id="gen4"
+            style="background-color: #ef233c"
+            class="color-palette-generator-demo-item"
+          ></div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    const genNew = document.getElementById("genNew");
+    const gen1 = document.getElementById("gen1");
+    const gen2 = document.getElementById("gen2");
+    const gen3 = document.getElementById("gen3");
+    const gen4 = document.getElementById("gen4");
+
+    function randColor() {
+      var symbols, color;
+      symbols = "0123456789ABCDEF";
+      color = "#";
+      color1 = "#";
+      color2 = "#";
+      color3 = "#";
+
+      for (var i = 0; i < 6; i++) {
+        color = color + symbols[Math.floor(Math.random() * 16)];
+      }
+
+      for (var i = 0; i < 6; i++) {
+        color1 = color1 + symbols[Math.floor(Math.random() * 16)];
+      }
+
+      for (var i = 0; i < 6; i++) {
+        color2 = color2 + symbols[Math.floor(Math.random() * 16)];
+      }
+
+      for (var i = 0; i < 6; i++) {
+        color3 = color3 + symbols[Math.floor(Math.random() * 16)];
+      }
+      document.getElementById("gen1").style.background = color;
+      document.getElementById("gen2").style.background = color1;
+      document.getElementById("gen3").style.background = color2;
+      document.getElementById("gen4").style.background = color3;
+    }
+  </script>
+</html>
