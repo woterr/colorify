@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coloriffy - Color generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content="Coloriffy - Generator" />
+    <meta property="og:url" content="https://coloriffy.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Create your project with these amazing color palettes!!"
+    />
+  </head>
+  <body>
+    <section class="generator-sec">
+      <header id="header">
+        <a href="index.html" class="logo">Coloriffy</a>
+        <div id="toggle"></div>
+        <div id="navbar">
+          <ul>
+            <li>
+              <a href="index.html"><i class="bx bx-home-alt"></i> Home</a>
+            </li>
+            <li>
+              <a href="palette.html"><i class="bx bx-palette"></i> Palette</a>
+            </li>
+            <li>
+              <a href="generator.html"
+                ><i class="bx bx-grid-alt"></i> Generator</a
+              >
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="generator-container">
+        <div
+          id="genitem1"
+          style="background-color: #fee440"
+          class="color-generator-item"
+        >
+          <span class="color-generator-item-span" id="genColor"></span>
+        </div>
+
+        <div
+          id="genitem2"
+          style="background-color: #8cfe40"
+          class="color-generator-item"
+        >
+          <span class="color-generator-item-span" id="genColor1"></span>
+        </div>
+        <div
+          id="genitem3"
+          style="background-color: #fe5c40"
+          class="color-generator-item"
+        >
+          <span class="color-generator-item-span" id="genColor2"></span>
+        </div>
+        <div
+          id="genitem4"
+          style="background-color: #4073fe"
+          class="color-generator-item"
+        >
+          <span class="color-generator-item-span" id="genColor3"></span>
+        </div>
+
+        <div
+          id="genitem5"
+          style="background-color: #fe40ee"
+          class="color-generator-item"
+        >
+          <span class="color-generator-item-span" id="genColor4"></span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const genNew = document.getElementById("genNew");
+
+      function randColorGen() {
+        var symbols, color;
+        symbols = "0123456789ABCDEF";
+        color = "#";
+        color1 = "#";
+        color2 = "#";
+        color3 = "#";
+        color4 = "#";
+
+        for (var i = 0; i < 6; i++) {
+          color = color + symbols[Math.floor(Math.random() * 16)];
+        }
+
+        for (var i = 0; i < 6; i++) {
+          color1 = color1 + symbols[Math.floor(Math.random() * 16)];
+        }
+
+        for (var i = 0; i < 6; i++) {
+          color2 = color2 + symbols[Math.floor(Math.random() * 16)];
+        }
+
+        for (var i = 0; i < 6; i++) {
+          color3 = color3 + symbols[Math.floor(Math.random() * 16)];
+        }
+
+        for (var i = 0; i < 6; i++) {
+          color4 = color4 + symbols[Math.floor(Math.random() * 16)];
+        }
+        document.getElementById("genitem1").style.backgroundColor = color;
+        document.getElementById("genColor").innerHTML = color;
+        document.getElementById("genitem2").style.backgroundColor = color1;
+        document.getElementById("genColor1").innerHTML = color1;
+        document.getElementById("genitem3").style.backgroundColor = color2;
+        document.getElementById("genColor2").innerHTML = color2;
+        document.getElementById("genitem4").style.backgroundColor = color3;
+        document.getElementById("genColor3").innerHTML = color3;
+        document.getElementById("genitem5").style.backgroundColor = color4;
+        document.getElementById("genColor4").innerHTML = color4;
+      }
+    </script>
+
+    <script>
+      window.onload = function exampleFunction() {
+        randColorGen();
+      };
+    </script>
+
+    <script>
+      const header = document.getElementById("header");
+      const toggle = document.getElementById("toggle");
+      const navbar = document.getElementById("navbar");
+
+      document.onclick = function (e) {
+        if (
+          e.target.id !== "header" &&
+          e.target.id !== "toggle" &&
+          e.target.id !== "navbar"
+        ) {
+          toggle.classList.remove("active");
+          navbar.classList.remove("active");
+        }
+      };
+
+      toggle.onclick = function () {
+        toggle.classList.toggle("active");
+        navbar.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
