@@ -47,6 +47,11 @@
           class="color-generator-item"
         >
           <span class="color-generator-item-span" id="genColor"></span>
+
+          <input class="clipboard1 hidden" />
+          <button id="copybtn" class="copybtn" onclick="copyText1()">
+            copy
+          </button>
         </div>
 
         <div
@@ -55,6 +60,11 @@
           class="color-generator-item"
         >
           <span class="color-generator-item-span" id="genColor1"></span>
+
+          <input class="clipboard2 hidden" />
+          <button id="copybtn" class="copybtn" onclick="copyText2()">
+            copy
+          </button>
         </div>
         <div
           id="genitem3"
@@ -62,6 +72,11 @@
           class="color-generator-item"
         >
           <span class="color-generator-item-span" id="genColor2"></span>
+
+          <input class="clipboard3 hidden" />
+          <button id="copybtn" class="copybtn" onclick="copyText3()">
+            copy
+          </button>
         </div>
         <div
           id="genitem4"
@@ -69,6 +84,10 @@
           class="color-generator-item"
         >
           <span class="color-generator-item-span" id="genColor3"></span>
+          <input class="clipboard4 hidden" />
+          <button id="copybtn" class="copybtn" onclick="copyText4()">
+            copy
+          </button>
         </div>
 
         <div
@@ -77,6 +96,10 @@
           class="color-generator-item"
         >
           <span class="color-generator-item-span" id="genColor4"></span>
+          <input class="clipboard5 hidden" />
+          <button id="copybtn" class="copybtn" onclick="copyText5()">
+            copy
+          </button>
         </div>
       </div>
     </section>
@@ -151,6 +174,58 @@
         toggle.classList.toggle("active");
         navbar.classList.toggle("active");
       };
+    </script>
+
+    <script>
+      function copyText1(e) {
+        var textToCopy1 = document.querySelector("#genColor");
+
+        var textBox1 = document.querySelector(".clipboard1");
+        textBox1.setAttribute("value", textToCopy1.innerHTML);
+
+        textBox1.select();
+        document.execCommand("copy");
+      }
+
+      function copyText2(e) {
+        var textToCopy2 = document.querySelector("#genColor1");
+
+        var textBox2 = document.querySelector(".clipboard2");
+        textBox2.setAttribute("value", textToCopy2.innerHTML);
+
+        textBox2.select();
+        document.execCommand("copy");
+      }
+
+      function copyText3(e) {
+        var textToCopy3 = document.querySelector("#genColor2");
+
+        var textBox3 = document.querySelector(".clipboard3");
+        textBox3.setAttribute("value", textToCopy3.innerHTML);
+
+        textBox3.select();
+        document.execCommand("copy");
+      }
+
+      function copyText4(e) {
+        var textToCopy4 = document.querySelector("#genColor3");
+
+        var textBox4 = document.querySelector(".clipboard4");
+        textBox4.setAttribute("value", textToCopy4.innerHTML);
+
+        textBox4.select();
+        document.execCommand("copy");
+      }
+
+      function copyText5(e) {
+        var textToCopy5 = document.querySelector("#genColor4");
+
+        var textBox5 = document.querySelector(".clipboard5");
+        textBox5.setAttribute("value", textToCopy5.innerHTML);
+
+        textBox5.select();
+        document.execCommand("copy");
+      }
     </script>
   </body>
 </html>
