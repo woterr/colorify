@@ -121,16 +121,15 @@ a {
   margin: 10px;
   padding: 10px;
   transition: all 0.3s;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
   border-radius: 10px;
   font-weight: 600;
   color: white;
-  background: #1af876;
+  background: #a2d2ff;
 }
 
 .home-container-title-link:hover {
   transition: all 0.3s;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.637);
+  box-shadow: 0 0 10px #b700ff79;
 }
 
 @media screen and (max-width: 1000px) {
