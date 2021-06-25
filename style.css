@@ -15,7 +15,8 @@ body {
 }
 
 ::selection {
-  background: #cfdfff !important;
+  background: #a065ff !important;
+  color: white;
 }
 
 .comp-name span {
