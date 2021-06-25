@@ -74,7 +74,7 @@ body {
   width: 60%;
   float: right;
   display: flex;
-  background-color: rgb(22, 22, 22);
+  background-color: none;
 }
 
 .color-palette-generator-demo-item {
@@ -97,15 +97,15 @@ a {
   padding: 5px;
   border: 4px solid white;
   outline: 0;
-  color: rgb(255, 255, 255);
+  color: #5e5e5e;
   cursor: pointer;
   font-size: 30px;
   font-weight: 600;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.192);
   font-family: "Nunito", sans-serif;
   transition: all 0.3s;
-  background: #161616;
   z-index: 10;
+  background: none;
 }
 
 .bx-refresh {
@@ -113,7 +113,7 @@ a {
 }
 
 .color-palette-generator-demo-btn:hover {
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.637);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.301);
   transition: all 0.3s;
 }
 
