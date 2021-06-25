@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coloriffy - Trending palettes</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content="Coloriffy - Trending palettes" />
+    <meta property="og:url" content="https://coloriffy.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Create your project with these amazing color palettes!!"
+    />
+  </head>
+  <body>
+    <section class="palette-sec">
+      <header id="header">
+        <a href="index.html" class="logo">Coloriffy</a>
+        <div id="toggle"></div>
+        <div id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a href="index.html"><i class="bx bx-home-alt"></i> Home</a>
+            </li>
+            <li>
+              <a href="palette.html"><i class="bx bx-palette"></i> Palette</a>
+            </li>
+            <li>
+              <a href="generator.html"
+                ><i class="bx bx-grid-alt"></i> Generator</a
+              >
+            </li>
+          </ul>
+        </div>
+      </header>
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div class="palette-container">
+        <div class="palette-container-title">
+          <span class="palette-container-title-header"
+            >Trending Color Palettes</span
+          >
+          <span class="palette-container-title-disc"
+            >Get motivated by these amazing color palettes and make your project
+            colorfull!</span
+          >
+        </div>
+
+        <div class="palette-container-main-sec">
+          <div class="palette-div">
+            <button class="palette-div-item" style="background-color: #ff9393">
+              <span class="palette-div-item-color">#ff9393</span>
+            </button>
+            <button class="palette-div-item" style="background-color: #ff6b6b">
+              <span class="palette-div-item-color">#c04b4b</span>
+            </button>
+            <button class="palette-div-item" style="background-color: #fcd5ce">
+              <span class="palette-div-item-color">#f7b8e2</span>
+            </button>
+            <button class="palette-div-item" style="background-color: #ffeef7">
+              <span class="palette-div-item-color">#ffeef</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    const header = document.getElementById("header");
+    const toggle = document.getElementById("toggle");
+    const navbar = document.getElementById("navbar");
+
+    document.onclick = function (e) {
+      if (
+        e.target.id !== "header" &&
+        e.target.id !== "toggle" &&
+        e.target.id !== "navbar"
+      ) {
+        toggle.classList.remove("active");
+        navbar.classList.remove("active");
+      }
+    };
+
+    toggle.onclick = function () {
+      toggle.classList.toggle("active");
+      navbar.classList.toggle("active");
+    };
+  </script>
+</html>

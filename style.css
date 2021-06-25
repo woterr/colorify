@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 html,
 body {
@@ -11,6 +12,10 @@ body {
   height: 100vh;
   padding: 0;
   align-items: center;
+}
+
+::selection {
+  background: #cfdfff !important;
 }
 
 .comp-name span {
@@ -279,33 +284,32 @@ li {
   transition: all 0.3s;
 }
 
-#navbar {
+.navbar {
   position: relative;
   height: 60px;
   right: -500px;
   align-items: center;
   display: flex;
-
   overflow: hidden;
   transition: all 0.3s;
 }
 
-#navbar.active {
+.navbar.active {
   right: 60px;
   transition: all 0.3s;
 }
 
-#navbar ul {
+.navbar ul {
   position: relative;
   display: flex;
   flex-direction: row;
 }
 
-#navbar ul li {
+.navbar ul li {
   margin: 0px 10px;
 }
 
-#navbar ul li a {
+.navbar ul li a {
   color: #8a5dce;
   font-weight: 600;
   font-size: 20px;
@@ -313,7 +317,7 @@ li {
   transition: all 0.3s;
 }
 
-#navbar ul li a:hover {
+.navbar ul li a:hover {
   color: #f0a6ca;
   transition: all 0.3s;
 }
@@ -383,4 +387,87 @@ li {
   transition: all 0.3s;
   background: #f0a6ca;
   border-radius: 50px;
+}
+
+.palette-sec {
+  min-height: 100vh;
+  background-color: rgb(253, 253, 253);
+  width: 100%;
+}
+
+.palette-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.palette-container-title {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+  text-align: center;
+}
+
+.palette-container-title-header {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.palette-container-title-disc {
+  font-size: 17px;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  color: #5e5e5e;
+  min-width: 400px;
+  margin: 10px;
+}
+
+.palette-container-main-sec {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.palette-div {
+  min-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0px 10px 10px 10px;
+  display: flex;
+  height: 150px;
+  border: 1px solid rgb(196, 196, 196);
+}
+
+.palette-div-item {
+  width: 25%;
+  outline: none;
+  border: none;
+  height: 75%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.palette-div-item:hover {
+  transition: all 0.3s;
+  width: 50%;
+}
+
+.palette-div-item:hover .palette-div-item-color {
+  color: white;
+  transition: all 0.3s;
+}
+
+.palette-div-item-color {
+  z-index: 2;
+  transition: all 0.3s;
+  color: black;
+  mix-blend-mode: difference;
+  opacity: 0.9;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
