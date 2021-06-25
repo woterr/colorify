@@ -422,23 +422,32 @@ li {
   text-align: center;
   color: #5e5e5e;
   min-width: 400px;
-  margin: 10px;
+  margin: 10px 10px 0 10px;
+}
+
+.palette-container-title-disc-1 {
+  font-size: 13px;
+  color: #cfcfcf;
+  font-weight: 600;
 }
 
 .palette-container-main-sec {
   height: 100%;
-  width: 100%;
-  display: flex;
+  width: 98%;
+  display: inline-flex;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 .palette-div {
-  min-width: 500px;
+  min-width: 31.3%;
   border-radius: 15px;
   overflow: hidden;
-  margin: 0px 10px 10px 10px;
+  margin: 10px;
   display: flex;
   height: 150px;
+  flex: 1;
+
   border: 1px solid rgb(196, 196, 196);
 }
 
@@ -458,6 +467,7 @@ li {
 
 .palette-div-item:hover .palette-div-item-color {
   color: white;
+  visibility: visible;
   transition: all 0.3s;
 }
 
@@ -465,9 +475,17 @@ li {
   z-index: 2;
   transition: all 0.3s;
   color: black;
+  visibility: hidden;
+  pointer-events: none;
   mix-blend-mode: difference;
   opacity: 0.9;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media (max-width: 579px) {
+  .palette-div {
+    min-width: 90%;
+  }
 }
