@@ -491,7 +491,7 @@
         )
         .join("")}`;
 
-    $("button.col").click(function () {
+    $(".col").click(function () {
       var y = $(this).css("backgroundColor");
       var x = rgba2hex(y);
       copyToClipboard(x);
@@ -500,14 +500,6 @@
 
   <script>
     window.history.pushState("object or string", "Title", "/palette");
-  </script>
-
-  <script>
-    $(".palette-container-main-sec").html(
-      $(".palette-container-main-sec .palette-div").sort(function () {
-        return Math.random() - 0.5;
-      })
-    );
   </script>
 
   <script>
