@@ -64,7 +64,7 @@
 
         <div id="categoryBtns" class="categoryBtns">
           <span>Filter - </span>
-          <button class="cat-btn active" onclick="filterSelection('all')">
+          <button class="cat-btn active-cat" onclick="filterSelection('all')">
             Show all
           </button>
           <button class="cat-btn" onclick="filterSelection('warm')">
@@ -545,9 +545,9 @@
     var btns = btnContainer.getElementsByClassName("cat-btn");
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
+        var current = document.getElementsByClassName("active-cat");
+        current[0].className = current[0].className.replace(" active-cat", "");
+        this.className += " active-cat";
       });
     }
   </script>

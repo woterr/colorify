@@ -520,7 +520,7 @@ li {
   color: #868686;
 }
 
-.active {
+.active-cat {
   border: 2px solid rgb(109, 109, 109);
   padding: 10px;
   border-radius: 10px;
