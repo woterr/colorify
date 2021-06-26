@@ -448,8 +448,12 @@ li {
   display: flex;
   height: 150px;
   flex: 1;
-
   border: 1px solid rgb(196, 196, 196);
+  display: none; /* hidden */
+}
+
+.show {
+  display: flex;
 }
 
 .palette-div-item {
@@ -489,4 +493,35 @@ li {
   .palette-div {
     min-width: 90%;
   }
+}
+
+.categoryBtns span {
+  color: #5e5e5e;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cat-btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #555555;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.cat-btn:hover {
+  transition: all 0.3s;
+  color: #868686;
+}
+
+.active {
+  border: 2px solid rgb(109, 109, 109);
+  padding: 10px;
+  border-radius: 10px;
 }

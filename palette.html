@@ -62,8 +62,27 @@
           </p>
         </div>
 
+        <div id="categoryBtns" class="categoryBtns">
+          <span>Filter - </span>
+          <button class="cat-btn active" onclick="filterSelection('all')">
+            Show all
+          </button>
+          <button class="cat-btn" onclick="filterSelection('warm')">
+            warm
+          </button>
+          <button class="cat-btn" onclick="filterSelection('cold')">
+            cold
+          </button>
+          <button class="cat-btn" onclick="filterSelection('pastel')">
+            pastel
+          </button>
+          <button class="cat-btn" onclick="filterSelection('dark')">
+            dark
+          </button>
+        </div>
+
         <div class="palette-container-main-sec">
-          <div class="palette-div">
+          <div class="palette-div warm">
             <button
               class="palette-div-item col"
               style="background-color: #ff9393"
@@ -90,7 +109,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div pastel">
             <button
               class="palette-div-item col"
               style="background-color: #dac4c4"
@@ -117,7 +136,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div dark">
             <button
               class="palette-div-item col"
               style="background-color: #22223b"
@@ -144,7 +163,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div dark">
             <button
               class="palette-div-item col"
               style="background-color: #006466"
@@ -171,7 +190,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div warm">
             <button
               class="palette-div-item col"
               style="background-color: #9b5de5"
@@ -198,7 +217,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div pastel">
             <button
               class="palette-div-item col"
               style="background-color: #8e9aaf"
@@ -225,7 +244,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div warm">
             <button
               class="palette-div-item col"
               style="background-color: #590d22"
@@ -252,7 +271,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div pastel">
             <button
               class="palette-div-item col"
               style="background-color: #f3c4fb"
@@ -279,7 +298,7 @@
             </button>
           </div>
 
-          <div class="palette-div">
+          <div class="palette-div cool warm">
             <button
               class="palette-div-item col"
               style="background-color: #1a535c"
@@ -303,6 +322,113 @@
               style="background-color: #ff6b6b"
             >
               <span class="palette-div-item-color">#ff6b6b</span>
+            </button>
+          </div>
+
+          <div class="palette-div warm">
+            <button
+              class="palette-div-item col"
+              style="background-color: #3caf2e"
+            >
+              <span class="palette-div-item-color">#3CAF2E</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #53d43b"
+            >
+              <span class="palette-div-item-color">#53D43B</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #e3d94b"
+            >
+              <span class="palette-div-item-color">#E3D94B</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #5bd2b5"
+            >
+              <span class="palette-div-item-color">#5BD2B5</span>
+            </button>
+          </div>
+
+          <div class="palette-div pastel">
+            <button
+              class="palette-div-item col"
+              style="background-color: #555b6e"
+            >
+              <span class="palette-div-item-color">#555b6e</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #89b0ae"
+            >
+              <span class="palette-div-item-color">#89b0ae</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #bee3db"
+            >
+              <span class="palette-div-item-color">#bee3db</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #ffd6ba"
+            >
+              <span class="palette-div-item-color">#5BD2B5</span>
+            </button>
+          </div>
+
+          <div class="palette-div cold dark">
+            <button
+              class="palette-div-item col"
+              style="background-color: #03045e"
+            >
+              <span class="palette-div-item-color">#03045e</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #0077b6"
+            >
+              <span class="palette-div-item-color">#0077b6</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #00b4d8"
+            >
+              <span class="palette-div-item-color">#00b4d8</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #90e0ef"
+            >
+              <span class="palette-div-item-color">#90e0ef</span>
+            </button>
+          </div>
+          <div class="palette-div pastel">
+            <button
+              class="palette-div-item col"
+              style="background-color: #ff99c8"
+            >
+              <span class="palette-div-item-color">#ff99c8</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #fcf6bd"
+            >
+              <span class="palette-div-item-color">#fcf6bd</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #a9def9"
+            >
+              <span class="palette-div-item-color">#a9def9</span>
+            </button>
+            <button
+              class="palette-div-item col"
+              style="background-color: #e4c1f9"
+            >
+              <span class="palette-div-item-color">#e4c1f9</span>
             </button>
           </div>
         </div>
@@ -374,5 +500,63 @@
 
   <script>
     window.history.pushState("object or string", "Title", "/palette");
+  </script>
+
+  <script>
+    $(".palette-container-main-sec").html(
+      $(".palette-container-main-sec .palette-div").sort(function () {
+        return Math.random() - 0.5;
+      })
+    );
+  </script>
+
+  <script>
+    filterSelection("all");
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("palette-div");
+      if (c == "all") c = "";
+      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+      for (i = 0; i < x.length; i++) {
+        RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+      }
+    }
+
+    // Show filtered elements
+    function AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    // Hide elements that are not selected
+    function RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current control button (highlight it)
+    var btnContainer = document.getElementById("categoryBtns");
+    var btns = btnContainer.getElementsByClassName("cat-btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
   </script>
 </html>
