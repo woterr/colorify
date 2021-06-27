@@ -289,7 +289,7 @@ li {
 .navbar {
   position: relative;
   height: 60px;
-  right: -500px;
+  right: -600px;
   align-items: center;
   display: flex;
   overflow: hidden;
@@ -312,7 +312,7 @@ li {
 }
 
 .navbar ul li a {
-  color: #8a5dce;
+  color: rgb(221, 167, 212);
   font-weight: 600;
   font-size: 20px;
   letter-spacing: 1px;
@@ -320,7 +320,7 @@ li {
 }
 
 .navbar ul li a:hover {
-  color: #f0a6ca;
+  color: #9d72b1;
   transition: all 0.3s;
 }
 
@@ -526,4 +526,10 @@ li {
   border: 2px solid rgb(109, 109, 109);
   padding: 10px;
   border-radius: 10px;
+}
+
+.gradient-sec {
+  min-height: 100vh;
+  background-color: rgb(253, 253, 253);
+  width: 100%;
 }
